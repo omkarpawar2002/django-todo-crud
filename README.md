@@ -98,3 +98,13 @@ Once the development server is running, you can perform the following actions:
 - ✅ Add task completion status (mark as done / undone)
 - 📊 Improve UI for better task organization
 - 🔐 Add user authentication for personal task lists
+
+---
+
+## 👤 Author
+
+**Omkar Pawar**  
+A Django beginner building simple and clean web applications.
+
+- GitHub: [@omkarpawar2002](https://github.com/omkarpawar2002)
+- LinkedIn: *(add if you want)*
