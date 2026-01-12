@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.log
+
+# Django
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+
+# Environment variables
+.env
+.env.*
+venv/
+env/
+ENV/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Migration files (optional - usually keep them)
+# **/migrations/*.py
+# !**/migrations/__init__.py
+
+# Coverage / testing
+htmlcov/
+.coverage
+.tox/
+
+# Jupyter
+.ipynb_checkpoints/

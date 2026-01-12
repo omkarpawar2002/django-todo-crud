@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+        <div class="d-flex align-items-center">
+            <a class="navbar-brand mb-0">Todo App</a>
+            <a href="{% url 'display_task' %}" class="nav-link ms-2">Task List</a>
+        </div>
+
+        <form class="d-flex" role="search">
+            <a href="{% url 'add_task' %}">
+                <button class="btn btn-primary" type="button">Add Task</button>
+            </a>
+        </form>
+    </div>
+</nav>
+{% endblock %}

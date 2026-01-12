@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+<title>UPDATE TASK</title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% include '../includes/navbar.html' %}
+    <h1>Edit Tasks</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{form | crispy}}
+        <button type="submit" class="btn btn-primary btn-large">Save</button>
+        <a href="{% url 'display_task' %}"><button type="button" class="btn btn-secondary btn-large">Cancel</button></a>
+    </form>
+</div>
+{% endblock %}

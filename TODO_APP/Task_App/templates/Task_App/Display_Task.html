@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>DISPLAY TASK</title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% include '../includes/navbar.html' %}
+    <h1>All Tasks</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Done</th>
+                <th>Created</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in records %}
+
+            {% if record %}
+            <tr>
+                <td>{{record.title}}</td>
+                <td>{{record.description}}</td>
+                <td>
+                    <button class="btn btn-outline-success btn-large">Mark</button>
+                </td>
+                <td>{{record.created_at}}</td>
+                <td>
+                    <a href="{% url 'update_task' record.id %}"><button class="btn btn-warning btn-large me-2"
+                            type="button">Edit</button></a>
+                    <a href="{% url 'delete_task' record.id %}"><button class="btn btn-danger btn-large me-2"
+                            type="button">Delete</button></a>
+                </td>
+            </tr>
+            {% else %}
+            <tr>
+                <td>No tasks yet.</td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

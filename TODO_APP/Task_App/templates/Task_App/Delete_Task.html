@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+<title>DELETE TASK</title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% include '../includes/navbar.html' %}
+    <h1>Delete Tasks</h1>
+    <p>Are you sure want to delete "<strong>{{obj.title | title}}</strong>"</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger btn-large">Yes,delete</button>
+        <a href="{% url 'display_task' %}"><button type="button" class="btn btn-secondary btn-large">Cancel</button></a>
+    </form>
+</div>
+{% endblock %}
