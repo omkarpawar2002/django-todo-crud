@@ -107,4 +107,3 @@ Once the development server is running, you can perform the following actions:
 A Django beginner building simple and clean web applications.
 
 - GitHub: [@omkarpawar2002](https://github.com/omkarpawar2002)
-- LinkedIn: *(add if you want)*
